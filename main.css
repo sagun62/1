@@ -1,4 +1,4 @@
- @font-face
+@font-face
 {
 font-family: Mazda Type;
 src:url(Mazda\ Type\ Medium.ttf);
@@ -8,27 +8,31 @@ src:url(Mazda\ Type\ Medium.ttf);
     padding: 0px;
 }.baner
 {
+    position: relative;
     width:10%;
     height:170px;
     background-color: #101010;
     margin:left;
+    
 }
 #logo
 {
     position: relative;
-    margin-top: -5px;
-    margin-left:3.5px;
+    width:100%;
+    height: 100%;
     
 }
 
 .first-header
 {
+   
     width:89.99%;
     height:70px;
     background-color: #101010;
     margin-top:-170px;
     margin-left:10%;
     border-left: 0.02px solid #DCDCDC;
+   
 }
 
 .second-header
@@ -41,15 +45,19 @@ src:url(Mazda\ Type\ Medium.ttf);
     border-top: 0.02px solid #DCDCDC;
     border-left: 0.02px solid #DCDCDC;
     
+    
 }
 .slider
 {
     width:100%;
     height:1080px;
-    background-image: url(lambo2.jpg);
+    background-image: url(tlo.png);
     background-size: 100% 1080px;
     position: relative;
     margin-top:-1px;
+    z-index: 0;
+    
+    
    
 }
 .tekst
@@ -86,7 +94,7 @@ src:url(Mazda\ Type\ Medium.ttf);
     height:500px;
     float: left;
     background-color: #f5f5f5;
-   
+   overflow: hidden;
     
 }
 .srodek_blok
@@ -95,7 +103,7 @@ src:url(Mazda\ Type\ Medium.ttf);
     height:500px;
     float: left;
     background-color: #f5f5f5;
-   
+    overflow: hidden;
    
 }
 .prawy_blok
@@ -104,31 +112,31 @@ src:url(Mazda\ Type\ Medium.ttf);
     height:500px;
     float: left;
     background-color: #f5f5f5;
-    
+    overflow: hidden;
 }
 
 #tabela1
 {
     position: relative;
-    margin-left:800px;
+    margin-left:46.9%;
 }
 #tabela2
 {
     position: relative;
-    margin-left:674px;
+    margin-left:35%;
 }
 #tabela3
 {
     position: relative;
-    margin-top: -103px;
-    margin-left:1380px;
+   
+    margin-left:80.5%
 }
 #tabela4
 {
     width:100%;
     height:150px;
     position: relative;
-    margin-top:-107px;
+    margin-top:-16.5%;
     border-left: 0.02px solid #DCDCDC;
     border-right: 0.02px solid #DCDCDC;
     
@@ -141,56 +149,103 @@ src:url(Mazda\ Type\ Medium.ttf);
     font-size: 15px;
     font-family: Mazda Type;
 }
+#lupa
+{padding: 140%;}
 .nav2
-{
-    width:22%;
+{   
+    
+    width:19.5%;
     height:100px;
     text-align:center;
     font-size: 18px;
     font-family: Mazda Type;
     margin:0;
     padding: 0;
+    border:0;
     
 }
 
-a{
+.a{
     color:#DCDCDC;
     text-decoration: none;
 }
-a:hover {
+.a:hover {
     color:white;
     transition-duration: 0.7s;
   }
-
-.lewa
-{
-    
-    position: absolute;
-    border:0px;
-    padding: 0px;
+  .lewa
+  {
+      
+      position: absolute;
+      border:0px;
+      padding: 0px;
+      z-index: 4;
+  }
+  #lewa
+  {
+      position: absolute;
+      margin-top: 340px;
+      margin-left: 8px;
+      z-index: 4;
+  }
+  #lewa:hover {
+    animation-name: lewa;
+    animation-direction:alternate;
+    animation-duration: 0.7s; 
+    animation-iteration-count:12;
+    opacity: 0.7;
 }
-#lewa
+@keyframes lewa
+{
+    from {left: 0px;}
+    to {left:10px;}
+}
+  .prawa
+  {  
+  
+      position:absolute;
+      border:0px;
+      padding: 0px;
+      z-index: 4;
+  }
+  #prawa
+  {
+      position: absolute;
+      margin-top: 340px;
+      margin-left:1852px; 
+      z-index: 4;
+     
+  }
+  #prawa:hover {
+    animation-name: prawa;
+    animation-direction:alternate;
+    animation-duration: 0.7s; 
+    animation-iteration-count:12;
+    opacity: 0.7;
+}
+@keyframes prawa
+{
+    from {left: 0px;}
+    to {left:-10px;}
+}
+.napis
 {
     position: absolute;
-    margin-top: 380px;
-    margin-left: 10px; 
+    z-index: 3;
+    display: none;
 }
-.prawa
-{  
-
-    position:absolute;
-    border:0px;
-    padding: 0px;
-}
-#prawa
+.test
 {
     position: absolute;
-    margin-top: 380px;
-    margin-left:1820px; 
+    z-index: 2;
 }
 .slajd
 {
+    
+    position:absolute;
     display:none;   
+    z-index: 3;
+    
 }
 .wiersz1
 {
@@ -216,11 +271,15 @@ a:hover {
     -ms-transform: scale(1.02);
     transform: scale(1.02);
     transition-duration: 1s;
+    
+    
 }
 #movie
 {
     width:100%;
-    position: auto;
+    position: absolute;
+    height: 1080px;
+    margin-top: -0.4%;
     
 }
 .p1
@@ -246,26 +305,510 @@ a:hover {
 {
     height:50px;
     width:100%;
-    float:left;
-    position: relative;
-    margin-top:170px;
+    position: absolute;
+    margin-top:81%;
     background-color: #101010;
 }
 .login
 {
     width:100%;
     height:745px;
-    float: left;
     position: relative;
     margin-top:-1px;
     background-color: #f5f5f5;
 }
 .footer_login
 {
-    height:50px;
+    height:51px;
     width:100%;
     float:left;
-    position: relative;
-    margin-top:1px;
+    
     background-color: #101010;
+}
+#modele_pod
+{
+    
+    visibility: hidden; 
+    position:relative;
+    background-color:#f5f5f5;
+    width:111.1%;
+    height: 550%;
+    z-index: 4;
+    margin-left: -11.1%;
+    margin-top: -0.28%;
+    
+       
+}
+#wyszukiwarka
+{
+    opacity: 0.95;
+    visibility: hidden; 
+    position:relative;
+    background-color:#696969;
+    width:111.1%;
+    height: 1150%;
+    z-index: 4;
+    margin-left: -11.2%;
+    margin-top: 5.6%;
+   
+    
+       
+}
+
+
+.modele1
+{
+    background-color:#f5f5f5;
+    width:13.63%;
+    height: 29%;
+    margin-top: 2%;
+    margin-left: 14.5%;
+    float:left;
+    position: relative;
+    
+}
+.modele1:hover
+{
+    -webkit-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    transform: scale(1.04);
+    transition-duration: 0.5s;
+}
+.modele2
+{
+    background-color:#f5f5f5;
+    width:13.63%;
+    height: 29%;
+    margin-top: 5%;
+    margin-left: 14.5%;
+    float:left;
+    position: relative;
+}
+.modele2:hover
+{
+    -webkit-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    transform: scale(1.04);
+    transition-duration: 0.5s;
+}
+.nazwa
+{
+    position: relative;
+    margin-top: -10%;
+    color:	#696969;
+    text-align: center;
+    font-family: Mazda Type;
+    font-size:20px;
+}
+.cena
+{
+    position: relative;
+    margin-top: 2%;
+    color:	#696969;
+    text-align: center;
+    font-family: Mazda Type;
+    font-size:15px;
+}
+#szukaj
+{
+    border:0;
+    position: static;
+    margin-left: 50%; 
+    width: 40%;
+    height: 50px;
+    background-color:#696969;
+    font-size: 15px;
+    margin-top: 8%;
+    margin-left: 30%;
+}
+
+hr
+{
+color:#DCDCDC;
+width: 43%;
+margin-left: 29.2%;
+margin-top: -0.3;
+}
+.napis 
+{
+    position: absolute;
+    z-index: 3;
+    display: none;
+    text-align: center;
+    font-size: 50px;
+    color:white;
+    font-family: Mazda Type;
+    padding: 15px;
+    margin-top: 4%;
+    margin-left: 34.8%;
+    animation-name: napis;
+    animation-direction:reverse;
+    animation-duration: 0.8s; 
+    
+}
+@keyframes napis 
+{
+    from {top: 0px;}
+    to {top:6%;}
+}
+@keyframes napis2
+{
+    from {top: 0px;}
+    to {top:6%;}
+}
+@keyframes link
+{
+    from {top: 0px;}
+    to {top:8%;}
+}
+@keyframes link2
+{
+    from {top: 0px;}
+    to {top:8%;}
+}
+  
+.napis2
+{
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    font-size: 50px;
+    color:white;
+    font-family: Mazda Type;
+    padding: 15px;
+    margin-top: 4%;
+    margin-left: 34.8%;
+    animation-name: napis;
+    animation-direction:reverse;
+    animation-duration: 0.8s; 
+}
+.link2
+{
+    position:absolute;
+     z-index: 2;
+    width:11.5%;
+    height: 4%;
+    background-color:white; 
+    text-align: center;
+    padding-top: 22px;
+    margin-top:13%;
+    margin-left: 45.2%;
+    font-family: Mazda Type;
+    color:#101010;
+    text-decoration: none;
+    font-size: 16px;
+    animation-name: napis;
+    animation-direction:reverse;
+    animation-duration: 0.9s; 
+    border-radius: 10px;
+    
+}
+.link
+{
+    position:absolute;
+     z-index: 4;
+    width:11.5%;
+    height: 4%;
+    background-color:white; 
+    text-align: center;
+    padding-top: 22px;
+    margin-top:13%;
+    margin-left: 43.7%;
+    font-family: Mazda Type;
+    color:#101010;
+    text-decoration: none;
+    font-size: 16px;
+    animation-name: napis;
+    animation-direction:reverse;
+    animation-duration: 0.9s; 
+    display: none;
+    border-radius: 10px;
+}
+.link:hover {
+    color:white;
+    transition-duration: 0.5s;
+    background-color: #910a2d;
+}
+.link2:hover {
+    color:white;
+    transition-duration: 0.5s;
+    background-color: #910a2d;
+}
+.oferta-menu
+{
+    width:100%;
+    height:65px;
+    background-color: #f5f5f5;
+    position: absolute;
+    margin-top: -0.05%;
+    
+}
+.menu-oferta:hover
+{
+    color:#910a2d;
+    transition-duration: 0.7s;
+}
+.tabela-oferta
+{
+    position: absolute;
+    margin-left:13%;
+    margin-top: -2.5px;
+}
+.tabof
+{
+    position: relative;
+    padding-left: 25px;
+    height:65px;
+    text-align:center;
+    font-size: 16px;
+    font-family: Mazda Type;
+    
+    
+   
+}
+.menu-oferta
+{
+    position: relative;
+    text-decoration: none;
+    color:#101010;
+   display: inline;
+  
+}
+.oferta
+{
+    width: 100%;
+   height: 2000px;
+    font-family: Mazda Type;
+   
+   
+}
+.pierwsza
+{
+    width:100%;
+    height:350px;
+    background-color: white;
+    font-family: Mazda Type;
+    float: left;
+    margin-top: -20.4%;
+   
+
+}
+.druga
+{
+    width:100%;
+    height:350px;
+    background-color: #f5f5f5;
+    float:left;
+    font-family: Mazda Type;
+    margin-top: -2%;
+
+}
+.trzecia
+{
+    width:100%;
+    height:350px;
+    background-color: white;
+    float:left;
+    font-family: Mazda Type;
+}
+.czwarta
+{
+    width:100%;
+    height:350px;
+    background-color: #f5f5f5;
+    float:left;
+    font-family: Mazda Type;
+}
+.piata
+{
+    width:100%;
+    height:350px;
+    background-color: white;
+    float:left;
+    font-family: Mazda Type;
+}
+.szosta
+{
+    width:100%;
+    height:350px;
+    background-color: #f5f5f5;
+    float:left;
+    font-family: Mazda Type;
+}
+.footer-oferta
+{
+    height:50px;
+    width:100%;
+    float: left;
+    background-color: #101010;
+}
+.zdj-oferta
+{
+    position: relative;
+    margin-top: 1.5%;
+    margin-left: 56%;
+    width:22%;
+    
+}
+.opis 
+{
+    position: relative;
+    margin-top:-12.5%;
+    margin-left: 8%;
+    font-size: 18px;
+}
+.start
+{
+width:6%;
+height: 280px;
+position: relative;
+margin-top: -13.8%;
+margin-left: 93.5%;
+}
+   
+
+.start:hover {
+    animation-name: start;
+    animation-direction:alternate;
+    animation-duration: 0.9s; 
+    animation-iteration-count:12;
+    opacity: 0.7;
+}
+@keyframes start
+{
+    from {left: 0px;}
+    to {left:-30px;}
+}
+.zamien
+{
+    width:100%;
+    height:641px;
+    background-color: white;
+    position: absolute;
+    margin-top: 65px;
+    text-align: center;
+    font-size:20px;
+    font-family: Mazda Type;
+    padding-top:40px;
+    
+}
+.footer-zamien
+{
+    height:50px;
+    width:100%;
+    float: left;
+    margin-top: 15.5%;
+    background-color: #101010;
+}
+
+.opis2
+{
+    width:100%;
+    height: 180px;
+    background-color: #f5f5f5;  
+    position: relative;
+    font-size:18px;
+    font-family: Mazda Type;
+    text-align: center;
+    float:left;
+    margin-top: -23.8%;
+}
+.ser
+{
+    width:47%;
+    height:754px;
+   float: left;
+    position: relative;
+    margin-top: -14.4%;
+    background-image: url(ser.jpg.png);
+}
+.ser2
+{
+    width:53%;
+    height:754px;
+    background-color: white;
+    position: relative;
+    margin-top: -14.4%;
+   float: right;
+   font-size:18px;
+   font-family: Mazda Type;
+   text-align: center;
+}
+.grubo
+{
+    padding-top: 8px;
+    font-size:25px;
+   font-family: Mazda Type;
+   text-align: center;
+}
+.grubo2
+{
+    padding-top: 22%;
+    font-size:25px;
+   font-family: Mazda Type;
+   text-align: center;
+}
+.serbut
+{
+    
+    width:11.5%;
+    height: 4%;
+    background-color:black; 
+    text-align: center;
+    
+    font-family: Mazda Type;
+    color:white;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 7px;
+}
+.serbut:hover {
+    color:white;
+    transition-duration: 0.5s;
+    background-color: #910a2d;
+}
+.umow-serwis
+{
+    width: 100%;
+    height: 1000px;
+    background-color: #f5f5f5;
+    float: left;
+    font-family: Mazda Type;
+    font-size:20px;
+    text-align: center;
+}
+.umow
+{
+width:50%;
+height: 40px;
+text-align: center;
+font-size: 20px;
+
+}
+.film
+{
+    width: 100%;
+    height:450px;
+    margin-top: -1px;
+    margin-left: 2.5%;
+    background-image: url(pre.jpg);
+    background-repeat: no-repeat;
+}
+
+.tekstpr
+{
+width: 100%;
+height: 300px;
+background-color: chartreuse;
+font-family: Mazda Type;
+   text-align: center;
+   font-size: 20px;
+}
+.grubo3
+{
+    padding: 10px;
+    font-size:25px;
+   font-family: Mazda Type;
+   text-align: center;
 }

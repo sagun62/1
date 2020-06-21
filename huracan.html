@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <script src="mainn.js"></script>
+    <link rel="shortcut icon" href="icon.png">
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+  <link rel="stylesheet" href="mainn.css" type="text/css">
+  <title>TESTTTTT</title>
+  <script type="text/javascript">
+
+var numer = Math.floor(Math.random()*3)+1;
+function zmienslajd()
+			{
+				numer++; if (numer>3) numer=1;
+				
+				var plik = "<img src=\"slajd" + numer + ".jpg\" />";
+				
+				document.getElementsByClassName("slider").innerHTML = plik;
+				
+				
+				setTimeout("zmienslajd()", 1000);
+				
+			
+			}
+</script>
+</head>
+<body  onload="zmienslajd()">
+    <div class="baner">
+        <a href="index.html"><img src="logo2.png" alt="logo" id="logo"></a>
+    </div>
+    <div class="first-header">
+          
+          <section>
+            <table id="tabela1">
+                <tr>
+                    <td class="nav"><a href="skonfiguruj.html">SKONFIGURUJ</a></td>	<td class="nav"><a href="cennik.html">POBIERZ CENNIK</a></td> 
+                    <td class="nav"><a href="jazda.html">UMÓW JAZDĘ</a></td>   <td class="nav"><a href="dealer.html">ZNAJDŹ DEALERA</a></td> 
+                    <td class="nav"><a href="login.php">LOGIN &nbsp; <img src="logowanie.png" alt="log" width="15px" height="15px" ></a></td>                 
+                </tr>         
+            </table> 
+        </section>   
+       
+        <div id="wyszukiwarka" ondblclick="hide('wyszukiwarka')" >
+           
+            <form id="main-searchForm" name="search" action="" method="post" onsubmit="wyszukaj()">
+                <input type="text"   id="szukaj" name="szukaj" autofocus placeholder="Wyszukaj" />
+                <input type="image" src="lupa.png" value="submit" width="20px" height="20px" />
+                
+            </form>
+        <hr>
+      
+            <ul id="mojaLista"><li>Gil</li><li>Wróbel</li><li>Sroka</li></ul>
+            
+        </div>
+        
+    </div>
+    <div class="second-header">
+        <section>
+            <table id="tabela2">
+                <tr>
+                    <td class="nav2"><a id="modele" onclick="show('modele_pod')" >MODELE</a></td>	<td class="nav2"><a href="oferta.html">OFERTA</a></td>
+                     <td class="nav2"><a href="premiera.html">PREMIERY</a></td>  <td class="nav2"><a href="serwis.html">SERWIS</a></td> 
+                       <td class="nav2"><a href="kontakt.html">KONTAKT</a></td>    
+                       <td class="nav2"><img src="lupa.png" onclick="show('wyszukiwarka')" id="lupa" alt="lupa" width="20px" height="20px"></td> 
+                </tr>               
+            </table>
+            
+       
+        </section>
+        <div id="modele_pod" onclick="hide('modele_pod')" >
+            <div class="modele1">
+                <a href="huracan.html"><img src="hura.png" alt="hura"></a>
+            <p class="nazwa">Progen Huracán</p>
+            <p class="cena">Od 1 050 400zł</p>
+            </div>
+            <div class="modele1">
+                <a href="panamera.html"><img src="pana.png" alt="panamera"></a>
+            <p class="nazwa">Progen Panamera</p>
+            <p class="cena">Od 426 140zł</p>
+            </div>
+            <div class="modele1">
+                <a href="dbs.html"><img src="astonlogo.png" alt="astlogo"></a>
+            <p class="nazwa">Progen DBS</p>
+            <p class="cena">Od 1 548 902zł</p>
+            </div>
+            <div class="modele2">
+                <a href="urus.html"><img src="urus.png" alt="urus"></a>
+            <p class="nazwa">Progen Urus</p>
+            <p class="cena">Od 1 950 000zł</p>
+            </div>
+            <div class="modele2">
+                <a href="seria3.html"><img src="beta.png" alt="beta"></a>
+            <p class="nazwa">Progen Seria 3</p>
+            <p class="cena">Od 142 900zł</p>
+            </div>
+            <div class="modele2">
+                <a href="amg.html"><img src="merc.png" alt="merc"></a>
+            <p class="nazwa">Progen AMG GT</p>
+            <p class="cena">Od 736 500zł</p>
+            </div>
+        </div>
+    </div>
+    <div class="slider">
+       
+        
+        
+        
+    </div>
+    <div class="tekst">
+        
+        <br><br>
+        <p><b>Losowy teskst o samochodach.</b></p>
+        <br>
+        <p>Post no so what deal evil rent by real in. But her ready least set lived spite solid.<p>
+        <p>She offices for highest and replied one venture pasture. Applauded no discovery in newspaper allowance am northward.<p>
+        <p>Frequently partiality possession resolution at or appearance unaffected he me. Engaged its was evident pleased husband.<p>        
+        <p>Goodness felicity do disposal dwelling no. First am plate jokes to began of cause an scale.</p>
+    </div>
+    <div class="main">
+        <div class="lewy_blok">
+            <img class="foto_main" src="lambo3.jpg"  width="100%" height="350px" >
+           
+            <p class="wiersz1">Niezawodny w każdych warunkach</p>
+            <br>
+            <p class="wiersz2">Świetny napęd na 4 koła</p>
+        </div>
+        <div class="srodek_blok">
+            <img class="foto_main" src="porsche.jpg"  width="100%" height="350px" >
+            <table id="tabela4">
+                <tr> 
+                                   
+                    <p class="wiersz1">Idealny na długie trasy</p>
+                </tr>
+                <tr>
+                    <br>
+                    <p class="wiersz2">Najlepiej wyciszone auto w segmencie</p >
+                </tr>               
+            </table>
+            
+        </div>
+        <div class="prawy_blok">
+            <img class="foto_main" src="merol.jpg"  width="100%" height="350px" >
+           
+                   <p class="wiersz1">Stworzony by zachwycać</p>
+                    <br>
+                    <p class="wiersz2">Silnik benzynowy o pojemnośći 3.0 generujący 560KM</p >
+        </div>
+    </div>
+    <div class="movie">
+     
+        <video id="movie" autoplay="autoplay" loop="loop">
+            <source src="movie.webm" type="video/webm"/>
+        </video>
+    </div>
+    <div class="footer">
+        <br>
+        <p class="p1">&copy; Copyright 2020 Progen Cars</p>
+        <p class="p2">Kamil Sagan</p>
+    </div>
+</body>
+</html>

@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-   
     <script src="main.js"></script>
     <link rel="shortcut icon" href="icon.png">
     <meta charset='utf-8'>
@@ -12,6 +11,7 @@
     
   <link rel="stylesheet" href="main.css" type="text/css">
   <title>Progen - The Future Is Now</title>
+
 </head>
 <body>
     <div class="baner">
@@ -22,42 +22,99 @@
           <section>
             <table id="tabela1">
                 <tr>
-                    <td class="nav"><a href="skonfiguruj.html">SKONFIGURUJ</a></td>	<td class="nav"><a href="cennik.html">POBIERZ CENNIK</a></td> 
-                    <td class="nav"><a href="jazda.html">UMÓW JAZDĘ</a></td>   <td class="nav"><a href="dealer.html">ZNAJDŹ DEALERA</a></td> 
-                    <td class="nav"><a href="login.php">LOGIN &nbsp; <img src="logowanie.png" alt="log" width="15px" height="15px" ></a></td>                 
+                    <td class="nav"><a href="skonfiguruj.html" class="a">SKONFIGURUJ</a></td>	<td class="nav"><a href="cennik.html" class="a">POBIERZ CENNIK</a></td> 
+                    <td class="nav"><a href="jazda.html" class="a">UMÓW JAZDĘ</a></td>   <td class="nav"><a href="dealer.html" class="a">ZNAJDŹ DEALERA</a></td> 
+                    <td class="nav"><a href="login.php" class="a">LOGIN &nbsp; <img src="logowanie.png" alt="log" width="15px" height="15px" ></a></td>                 
                 </tr>         
             </table> 
         </section>   
        
+        <div id="wyszukiwarka" ondblclick="hide('wyszukiwarka')" >
+           
+            <form id="main-searchForm" name="search" action="" method="post" onsubmit="wyszukaj()">
+                <input type="text"   id="szukaj" name="szukaj" autofocus placeholder="Wyszukaj" />
+                <input type="image" src="lupa.png" value="submit" width="20px" height="20px" />
+                
+            </form>
+        <hr>
+      
+            
+            
+        </div>
         
     </div>
     <div class="second-header">
         <section>
             <table id="tabela2">
                 <tr>
-                    <td class="nav2"><a href="modele.html">MODELE</a></td>	<td class="nav2"><a href="oferta.html">OFERTA</a></td>
-                     <td class="nav2"><a href="premiera.html">PREMIERY</a></td>  <td class="nav2"><a href="serwis.html">SERWIS</a></td> 
-                       <td class="nav2"><a href="kontakt.html">KONTAKT</a></td>   
+                    <td class="nav2"><a id="modele" onclick="show('modele_pod')" class="a">MODELE</a></td>	<td class="nav2"><a href="oferta.html" class="a">OFERTA</a></td>
+                     <td class="nav2"><a href="premiera.html" class="a">PREMIERY</a></td>  <td class="nav2"><a href="serwis.html" class="a">SERWIS</a></td> 
+                       <td class="nav2"><a href="kontakt.html" class="a">KONTAKT</a></td>    
+                       <td class="nav2"><img src="lupa.png" onclick="show('wyszukiwarka')" id="lupa" alt="lupa" width="20px" height="20px"></td> 
                 </tr>               
             </table>
-            <table id="tabela3">
-                <tr>                   
-                      <td class="nav2"><img src="lupa.png" alt="lupa" width="20px" height="20px"></td> 
-                </tr>               
-            </table>
+            
        
         </section>
-       
+        <div id="modele_pod" onclick="hide('modele_pod')" >
+            <div class="modele1">
+                <a href="huracan.html"><img src="hura.png" alt="hura"></a>
+            <p class="nazwa">Progen Huracán</p>
+            <p class="cena">Od 1 050 400zł</p>
+            </div>
+            <div class="modele1">
+                <a href="panamera.html"><img src="pana.png" alt="panamera"></a>
+            <p class="nazwa">Progen Panamera</p>
+            <p class="cena">Od 426 140zł</p>
+            </div>
+            <div class="modele1">
+                <a href="dbs.html"><img src="astonlogo.png" alt="astlogo"></a>
+            <p class="nazwa">Progen DBS</p>
+            <p class="cena">Od 1 548 902zł</p>
+            </div>
+            <div class="modele2">
+                <a href="urus.html"><img src="urus.png" alt="urus"></a>
+            <p class="nazwa">Progen Urus</p>
+            <p class="cena">Od 1 950 000zł</p>
+            </div>
+            <div class="modele2">
+                <a href="seria3.html"><img src="beta.png" alt="beta"></a>
+            <p class="nazwa">Progen Seria3</p>
+            <p class="cena">Od 142 900zł</p>
+            </div>
+            <div class="modele2">
+                <a href="amg.html"><img src="merc.png" alt="merc"></a>
+            <p class="nazwa">Progen AMG GT</p>
+            <p class="cena">Od 736 500zł</p>
+            </div>
+        </div>
     </div>
     <div class="slider">
+       
         <button class="lewa" onclick="plusDivs(-1)"><img src="lewa.png" id="lewa"></button>
         <button class="prawa" onclick="plusDivs(+1)"><img src="prawa.png" id="prawa"></button>
+       
+       
+       
+        <img class="slajd" src="slajd2.jpg" alt="slajd2" width="100%" height="1080px" >
+        <img class="slajd" src="slajd1.jpg.png" alt="slajd1" width="100%" height="1080px" >
+        <img class="slajd" src="slajd3.jpg" alt="slajd2" width="100%" height="1080px" >
+
+        <a href="oferta.html" class="link2">DOWIEDZ SIĘ WIĘCEJ</a>
+        <a href="seria3.html" class="link">DOWIEDZ SIĘ WIĘCEJ</a>
+        <a href="huracan.html"class="link">DOWIEDZ SIĘ WIĘCEJ</a>
+        <a href="dbs.html" class="link">DOWIEDZ SIĘ WIĘCEJ</a>
+
+        <p class="napis2" >SPRAWDŹ NASZE OFERTY<br>JUŻ TERAZ      
+        <p class="napis" >KOMFORT I SPORT<br>POŁĄCZENIE IDEALNE</p>
+        <p class="napis" >WIELKA MOC<br>W NIEWIELKIEM AUCIE</p>
+        <p class="napis" >PIĘKNY I NIEBEZPIECZNY<br>SPRAWDŹ GO</p>
+
+       
         
-        <img class="slajd" src="lambo2.jpg" alt="slajd1" width="100%" height="1080px" >
-        <img class="slajd" src="mclaren1.jpg" alt="slajd2" width="100%" height="1080px" >
-        <img class="slajd" src="aston3.jpg" alt="slajd2" width="100%" height="1080px" >
     </div>
     <div class="tekst">
+        
         <br><br>
         <p><b>Losowy teskst o samochodach.</b></p>
         <br>

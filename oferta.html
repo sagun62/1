@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="main.js"></script>
+    <link rel="shortcut icon" href="icon.png">
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+  <link rel="stylesheet" href="main.css" type="text/css">
+  <title>Progen - The Future Is Now</title>
+
+</head>
+<body>
+    <div class="baner">
+        <a href="index.html"><img src="logo2.png" alt="logo" id="logo"></a>
+    </div>
+    <div class="first-header">
+          
+          <section>
+            <table id="tabela1">
+                <tr>
+                    <td class="nav"><a href="skonfiguruj.html" class="a">SKONFIGURUJ</a></td>	<td class="nav"><a href="cennik.html" class="a">POBIERZ CENNIK</a></td> 
+                    <td class="nav"><a href="jazda.html" class="a">UMÓW JAZDĘ</a></td>   <td class="nav"><a href="dealer.html" class="a">ZNAJDŹ DEALERA</a></td> 
+                    <td class="nav"><a href="login.php" class="a">LOGIN &nbsp; <img src="logowanie.png" alt="log" width="15px" height="15px" ></a></td>                 
+                </tr>         
+            </table> 
+        </section>   
+       
+        <div id="wyszukiwarka" ondblclick="hide('wyszukiwarka')" >
+           
+            <form id="main-searchForm" name="search" action="" method="post" onsubmit="wyszukaj()">
+                <input type="text"   id="szukaj" name="szukaj" autofocus placeholder="Wyszukaj" />
+                <input type="image" src="lupa.png" value="submit" width="20px" height="20px" />
+                
+            </form>
+        <hr>
+      
+            
+            
+        </div>
+        
+    </div>
+    <div class="second-header">
+        <section>
+            <table id="tabela2">
+                <tr>
+                    <td class="nav2"><a id="modele" onclick="show('modele_pod')" class="a">MODELE</a></td>	<td class="nav2"><a href="oferta.html" class="a">OFERTA</a></td>
+                     <td class="nav2"><a href="premiera.html" class="a">PREMIERY</a></td>  <td class="nav2"><a href="serwis.html" class="a">SERWIS</a></td> 
+                       <td class="nav2"><a href="kontakt.html" class="a">KONTAKT</a></td>    
+                       <td class="nav2"><img src="lupa.png" onclick="show('wyszukiwarka')" id="lupa" alt="lupa" width="20px" height="20px"></td> 
+                </tr>               
+            </table>
+            
+       
+        </section>
+        <div id="modele_pod" onclick="hide('modele_pod')" >
+            <div class="modele1">
+                <a href="huracan.html"><img src="hura.png" alt="hura"></a>
+            <p class="nazwa">Progen Huracán</p>
+            <p class="cena">Od 1 050 400zł</p>
+            </div>
+            <div class="modele1">
+                <a href="panamera.html"><img src="pana.png" alt="panamera"></a>
+            <p class="nazwa">Progen Panamera</p>
+            <p class="cena">Od 426 140zł</p>
+            </div>
+            <div class="modele1">
+                <a href="dbs.html"><img src="astonlogo.png" alt="astlogo"></a>
+            <p class="nazwa">Progen DBS</p>
+            <p class="cena">Od 1 548 902zł</p>
+            </div>
+            <div class="modele2">
+                <a href="urus.html"><img src="urus.png" alt="urus"></a>
+            <p class="nazwa">Progen Urus</p>
+            <p class="cena">Od 1 950 000zł</p>
+            </div>
+            <div class="modele2">
+                <a href="seria3.html"><img src="beta.png" alt="beta"></a>
+            <p class="nazwa">Progen Seria3</p>
+            <p class="cena">Od 142 900zł</p>
+            </div>
+            <div class="modele2">
+                <a href="amg.html"><img src="merc.png" alt="merc"></a>
+            <p class="nazwa">Progen AMG GT</p>
+            <p class="cena">Od 736 500zł</p>
+            </div>
+        </div>
+    </div>
+    <div class= "oferta-menu"> 
+        
+        <table class="tabela-oferta">
+            <tr>
+                
+                 <td class="tabof"><a href="oferta.html" class="menu-oferta" >OFERTA</a></td>  
+                   <td class="tabof"><a href="zamienauto.html" class="menu-oferta">ZAMIEŃ AUTO</a></td>    
+                   
+            </tr>               
+        </table>
+        
+    </div>
+    <div class="oferta">
+        <div class="pierwsza">
+            <img src="hura.png" class="zdj-oferta">
+            <section class="opis" > 
+         <h1>Progen Huracan</h1>
+         <br>
+          <p><b>DOTYCZY MODELI WYPRODUKOWANYCH W ROKU 2019</b></p>
+          <br>
+            <p>Promocyjne finansowanie 1% wartości samochodu miesięcznie</p>
+            <p>Dodatkowy komplet kół zimowych za 1 PLN: felgi aluminiowe i opony zimowe</p>
+            <br>
+         <p><b>DOTYCZY MODELI WYPRODUKOWANYCH W ROKU 2020</b></p>
+         <br>
+            <p>Promocyjne finansowanie 1% wartości samochodu miesięcznie</p>
+          <p>Pełny zbiornik paliwa lotniczego</p>
+        </section>
+        <a href="huracan.html"><img src="next2.png" class="start"></a>
+        </div>
+        <div class="druga">
+            <img src="pana.png" class="zdj-oferta">
+            <section class="opis">
+                <h1>Progen Panamera</h1>
+                <br>
+            <p><b>DOTYCZY MODELI WYPRODUKOWANYCH W ROKU 2019</b></p>
+            <br>
+            <p>Promocyjne finansowanie 1% wartości samochodu miesięcznie</p>
+            <p>Dodatkowy komplet kół zimowych za 1 PLN: felgi aluminiowe i opony zimowe</p>
+            <br>
+         <p><b>DOTYCZY MODELI WYPRODUKOWANYCH W ROKU 2020</b></p>
+         <br>
+            <p>Promocyjne finansowanie 1% wartości samochodu miesięcznie</p>
+          <p>Lakier metalizowany za 999 PLN</p>
+        </section>
+        <a href="panamera.html"><img src="next2.png" class="start"></a>
+        </div>
+        <div class="trzecia">
+            <img src="astonlogo.png" class="zdj-oferta">
+            <section class="opis">
+                <h1>Progen DBS</h1>
+                <br>
+          <p><b>DOTYCZY MODELI WYPRODUKOWANYCH W ROKU 2019</b></p>
+          <br>
+            <p>Promocyjne finansowanie 1% wartości samochodu miesięcznie</p>
+            <p>Dodatkowy komplet kół zimowych za 1 PLN: felgi aluminiowe i opony zimowe</p>
+            <br>
+         <p><b>DOTYCZY MODELI WYPRODUKOWANYCH W ROKU 2020</b></p>
+         <br>
+            <p>Promocyjne finansowanie 1% wartości samochodu miesięcznie</p>
+          <p>Promocyjny pakiet ubezpieczenia OC/AC/NNW za 1499 PLN</p>
+        </section>
+        <a href="dbs.html"><img src="next2.png" class="start"></a>
+        </div>
+        <div class="czwarta">
+            <img src="urus.png" class="zdj-oferta">
+            <section class="opis">
+                <h1>Progen Urus</h1>
+                <br>
+            <p><b>DOTYCZY MODELI WYPRODUKOWANYCH W ROKU 2019</b></p>
+            <br>
+            <p>Promocyjne finansowanie 1% wartości samochodu miesięcznie</p>
+            <p>Dodatkowy komplet kół zimowych za 1 PLN: felgi aluminiowe i opony zimowe</p>
+            <br>
+         <p><b>DOTYCZY MODELI WYPRODUKOWANYCH W ROKU 2020</b></p>
+         <br>
+            <p>Promocyjne finansowanie 1% wartości samochodu miesięcznie</p>
+          <p>Przedłużona 5-letnia gwarancja za 500zł</p>
+          </section>
+          <a href="urus.html"><img src="next2.png" class="start"></a>
+        </div>
+        <div class="piata">
+            <img src="beta.png" class="zdj-oferta">
+            <section class="opis" >
+                <h1>Progen Seria3</h1>
+                <br>
+            <p><b>DOTYCZY MODELI WYPRODUKOWANYCH W ROKU 2019</b></p>
+            <br>
+            <p>Promocyjne finansowanie 1% wartości samochodu miesięcznie</p>
+            <p>Dodatkowy komplet kół zimowych za 1 PLN: felgi aluminiowe i opony zimowe</p>
+            <br>
+         <p><b>DOTYCZY MODELI WYPRODUKOWANYCH W ROKU 2020</b></p>
+         <br>
+            <p>Promocyjne finansowanie 1% wartości samochodu miesięcznie</p>
+            <p>+ 1000 PLN brutto na oryginalne akcesoria Progen</p>
+        </section>
+        <a href="seria3.html" ><img src="next2.png" class="start"></a>
+        </div>
+        <div class="szosta">
+            <img src="merc.png" class="zdj-oferta">
+            <section class="opis">
+                <h1>Progen AMG GT</h1>
+                <br>
+            <p><b>DOTYCZY MODELI WYPRODUKOWANYCH W ROKU 2019</b></p>
+            <br>
+            <p>Promocyjne finansowanie 1% wartości samochodu miesięcznie</p>
+            <p>Dodatkowy komplet kół zimowych za 1 PLN: felgi aluminiowe i opony zimowe</p>
+            <br>
+         <p><b>DOTYCZY MODELI WYPRODUKOWANYCH W ROKU 2020</b></p>
+         <br>
+            <p>Promocyjne finansowanie 1% wartości samochodu miesięcznie</p>
+            <p>Felgi 20' z oponami Michelin za 100zł</p>
+         
+        </section>
+        <a href="amg.html"><img src="next2.png" class="start"></a>
+        </div>
+    </div>
+    <div class="footer-oferta">
+        <br>
+        <p class="p1">&copy; Copyright 2020 Progen Cars</p>
+        <p class="p2">Kamil Sagan</p>
+    </div>
+</body>
+</html>
