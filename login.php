@@ -90,49 +90,38 @@
         </div>
     </div>
     <div class="login">
-    
-    <H2>LOGIN</H2>
-<form name = "main.php" action = "main.php" method = "POST">
-<table>
-    <TR>
-<TD>Użytkownik:</TD>
-<TD >
-  <input type="text" name="user">
-</TD>
-</TR><TR>
-<TD>Hasło:</TD>
-<TD>
-  <INPUT TYPE="password" name="haslo">
-</TD>
-</TR><TR>
-<TD COLSPAN="2" ALIGN="center">
-  <input type="submit" value="Wejdź">
-</TD>
-</TR>
-</table>
-</form>
-
-<H2>REJESTRACJA</H2>
-<form name = "main2.php" action = "main2.php" method = "POST">
-<table>
-    <TR>
-<TD>Użytkownik:</TD>
-<TD >
-  <input type="text" name="user1">
-</TD>
-</TR><TR>
-<TD>Hasło:</TD>
-<TD>
-  <INPUT TYPE="password" name="haslo1">
-</TD>
-</TR><TR>
-<TD COLSPAN="2" ALIGN="center">
-  <input type="submit" value="zarejestruj">
-</TD>
-</TR>
-</table>
-</form>
    
+<div class="logowanie">
+<p class="grubo-log">LOGOWANIE</p>
+    
+       <br>
+        <form name = "main.php" action = "main.php" method = "POST">
+            <br> <p>Użytkownik: </p><br>
+            <input type="text" name="user" class="umow">
+            <br><br><p>Haslo: </p><br>
+           <input type="password" name="haslo"  class="umow">
+           <br>
+           <br>
+           <input type="submit" value="ZALOGUJ"  class="serbut">
+
+        </form>
+  
+</div>
+<div class="rejestracja">
+<p class="grubo-log">REJESTRACJA</p>
+    
+    <br>
+     <form name = "main2.php" action = "main2.php" method = "POST">
+         <br> <p>Użytkownik: </p><br>
+         <input type="text" name="user1" class="umow">
+         <br><br><p>Haslo: </p><br>
+        <input type="password" name="haslo1"  class="umow">
+        <br>
+        <br>
+        <input type="submit" value="DOŁĄCZ"  class="serbut">
+
+     </form>
+</div>
 
     </div>
     <div class="footer_login">

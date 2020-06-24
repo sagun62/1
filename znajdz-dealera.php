@@ -1,20 +1,20 @@
 
 <!DOCTYPE html>
 <html>
-<head>
+    <head>
+        <script src="main.js"></script>
+        <link rel="shortcut icon" href="icon.png">
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+        
+      <link rel="stylesheet" href="main.css" type="text/css">
+      <title>Progen - The Future Is Now</title>
     
-    <script src="main.js"></script>
-    <link rel="shortcut icon" href="icon.png">
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    
-  <link rel="stylesheet" href="main.css" type="text/css">
-  <title>Progen - The Future Is Now</title>
-</head>
+    </head>
 <body>
-<div class="baner">
+    <div class="baner">
         <a href="index.html"><img src="logo2.png" alt="logo" id="logo"></a>
     </div>
     <div class="first-header">
@@ -89,66 +89,45 @@
             </div>
         </div>
     </div>
-    <div class="login">
-   <?php
-/*********************************************
-* plik formularz.php
-*********************************************/
-
-$user1 = trim($_POST['user1']);
-$haslo1 = trim($_POST['haslo1']);
-
-if(empty($user1) || empty($haslo1)) {
+    <div class="znajdz">
+        
+            
     
-// prosty formularz zawierający dwa pola
-echo  '<div class="rejestracja">
-<p class="grubo-log">REJESTRACJA</p>
-    
-    <br>
-     <form name = "main2.php" action = "main2.php" method = "POST">
-         <br> <p>Użytkownik: </p><br>
-         <input type="text" name="user1" class="umow">
-         <br><br><p>Haslo: </p><br>
-        <input type="password" name="haslo1"  class="umow">
-        <br>
-        <br>
-        <input type="submit" value="DOŁĄCZ"  class="serbut">
+    <?php
+$miasto = trim($_POST['miasto']);
+if(empty($miasto))
+{
+echo '<div class="znajdz">
+        
+            
+<form class="dealer-find" action = "znajdz-dealera.php" method = "POST" >
 
-     </form>
-</div>
-<div class="logowanie">
-<p class="error2">Błąd logowania, sprawdź login i hasło. Spróbuj ponownie</p>
+   <p class="dystans">Wybierz dealera: </p>
+   <select name="miasto"  class="umow2">
+   <option value="">Wybierz</option>
+   <option value="rzeszow.php" >Rzeszów</option>
+   <option value="warszawa.php">Warszawa</option>
+   <option value="gdansk.php">Gdańsk</option>
+   </select>
+   <br>
+   <input type="submit" value="ZNAJDŹ"  class="klik">
+   <p class="podaj">Nie wybrano dealera</p>
+</form>
+<img src="dealer.png" id="mapa2">
+<p class="dealerop" >TO JUZ OSTATNI KROK<br>DO NOWEGO PROGENA<BR>WYBIERZ DEALERA</p>
 </div>';
 }
-else {
-    
-    // dane pochodzące z formularza
-    $dane = $user1.":".$haslo1."\n";
-    // przypisanie zmniennej $file nazwy pliku
-    $file = "logowanie.txt";
-    // uchwyt pliku, otwarcie do dopisania
-    $fp = fopen($file, "a");
-    // zapisanie danych do pliku
-    fwrite($fp, $dane);
-    // zamknięcie pliku
-    fclose($fp);
-
-    echo  '<div class="login">
-    <p class="good">Witamy w My Progen</p>
-    <a href="index.html" class="good-link">Powrót na strone głowną</a>
-      </div>';
-    
-    
+else 
+{  
+include $miasto;  
 }
-
 ?> 
-
-
-
+       
     </div>
     <div class="footer_login">
-
         <br>
         <p class="p1">&copy; Copyright 2020 Progen Cars</p>
         <p class="p2">Kamil Sagan</p>
     </div>
+</body>
+</html>

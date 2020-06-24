@@ -1,20 +1,20 @@
 
 <!DOCTYPE html>
 <html>
-<head>
+    <head>
+        <script src="main.js"></script>
+        <link rel="shortcut icon" href="icon.png">
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+        
+      <link rel="stylesheet" href="main.css" type="text/css">
+      <title>Progen - The Future Is Now</title>
     
-    <script src="main.js"></script>
-    <link rel="shortcut icon" href="icon.png">
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    
-  <link rel="stylesheet" href="main.css" type="text/css">
-  <title>Progen - The Future Is Now</title>
-</head>
+    </head>
 <body>
-<div class="baner">
+    <div class="baner">
         <a href="index.html"><img src="logo2.png" alt="logo" id="logo"></a>
     </div>
     <div class="first-header">
@@ -89,66 +89,66 @@
             </div>
         </div>
     </div>
-    <div class="login">
-   <?php
-/*********************************************
-* plik formularz.php
-*********************************************/
-
-$user1 = trim($_POST['user1']);
-$haslo1 = trim($_POST['haslo1']);
-
-if(empty($user1) || empty($haslo1)) {
     
-// prosty formularz zawierający dwa pola
-echo  '<div class="rejestracja">
-<p class="grubo-log">REJESTRACJA</p>
-    
-    <br>
-     <form name = "main2.php" action = "main2.php" method = "POST">
-         <br> <p>Użytkownik: </p><br>
-         <input type="text" name="user1" class="umow">
-         <br><br><p>Haslo: </p><br>
-        <input type="password" name="haslo1"  class="umow">
-        <br>
-        <br>
-        <input type="submit" value="DOŁĄCZ"  class="serbut">
-
-     </form>
-</div>
-<div class="logowanie">
-<p class="error2">Błąd logowania, sprawdź login i hasło. Spróbuj ponownie</p>
-</div>';
-}
-else {
-    
-    // dane pochodzące z formularza
-    $dane = $user1.":".$haslo1."\n";
-    // przypisanie zmniennej $file nazwy pliku
-    $file = "logowanie.txt";
-    // uchwyt pliku, otwarcie do dopisania
-    $fp = fopen($file, "a");
-    // zapisanie danych do pliku
-    fwrite($fp, $dane);
-    // zamknięcie pliku
-    fclose($fp);
-
-    echo  '<div class="login">
-    <p class="good">Witamy w My Progen</p>
-    <a href="index.html" class="good-link">Powrót na strone głowną</a>
-      </div>';
-    
-    
-}
-
-?> 
+    <div class="opcje">
+        <img src="auto.png" alt="a1" id="a1"></a>
+        <img src="auto2.png" alt="a2" id="a2"></a>
+        <img src="auto3.png" alt="a3" id="a3"></a>
+            
+        <form name="Konfigurator">
+            <div class="wybor"><p>Wersja</p>
+            <select name="Wersja" onchange = "wybierzSilnik(this.value);"    class="kon">
+             <option value=" " selected="selected">Wybierz wersje wyposażenia</option>
+             <option value="1">Bieda Line</option>
+             <option value="2">Bogato Line</option>
+             <option value="3">Full Opcja Line</option>
+            </select> 
+            
+            <li id="a"></li>
+            <li id="b"></li>
+            <li id="c"></li>
 
 
-
+            
+         
+          
+            
+            
+        </div>
+        <div class="wybor"><p>Silnik</p>  
+            <select name="Silnik" onchange = "wybierzSkrzynie(this.value);"  class="kon">
+                <option value=" " selected="selected">Wybierz silnik</option>
+             </select>
+            <li id="d"></li>
+            <li id="e"></li>
+            <li id="f"></li>
+           
+            
+            </div>
+            <div class="wybor"> <p>Skrzynia Biegów</p>  
+            <select name="Skrzynia" onchange = "wybierzKolor(this.value);" class="kon">
+                <option value=" " selected="selected">Wybierz skrzynie</option>
+             </select>
+             <li id="g"></li>
+            </div>
+            <div class="wybor"> <p>Kolor</p>  
+            <select name="Kolor" onchange = "wybierzFelgi(this.value);" class="kon">
+                <option value=" " selected="selected">Wybierz kolor</option>
+             </select>
+             <li id="h"></li>
+            </div>
+            <div class="wybor"><p>Felgi</p>  
+            <select name="Felgi" onchange = "ustawFelgi(this.value);" class="kon">
+                <option value=" " selected="selected" >Wybierz felgi</option>
+             </select>
+             <li id="i"></li>
+            </div>
+       </form>
     </div>
     <div class="footer_login">
-
         <br>
         <p class="p1">&copy; Copyright 2020 Progen Cars</p>
         <p class="p2">Kamil Sagan</p>
     </div>
+</body>
+</html>

@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
     <script src="main.js"></script>
     <link rel="shortcut icon" href="icon.png">
     <meta charset='utf-8'>
@@ -12,9 +11,18 @@
     
   <link rel="stylesheet" href="main.css" type="text/css">
   <title>Progen - The Future Is Now</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
 </head>
 <body>
-<div class="baner">
+    <div class="baner">
         <a href="index.html"><img src="logo2.png" alt="logo" id="logo"></a>
     </div>
     <div class="first-header">
@@ -89,66 +97,54 @@
             </div>
         </div>
     </div>
-    <div class="login">
-   <?php
-/*********************************************
-* plik formularz.php
-*********************************************/
+    <div class="opis2">
+            <section>
+                <br>
+                <br>
+         <p class="grubo">ZAPISZ SIĘ NA JAZDĘ PRÓBNĄ JUŻ DZIŚ</p>
+         <br>
+            <p>Wypełnij formularz, a My skontaktujemy się z Tobą </p>
+            <p> i dopasujemy się do Twoich potrzeb.</p>
+            <p>Wybierz model, którym jesteś zainteresowany.</p>    
+            </section>
+        </div>
+  
+        
+       
+   <div class="umow-jazde">
+       <br>
+       <br>
+       <br>
+        <form name = "umow-jazde.php" action = "umow-jazde.php" method = "POST">
+            <br> <p>Podaj Imię: </p><br>
+            <input type="text" name="imie" class="umow">
+            <br><br><p>Podaj Nazwisko: </p><br>
+           <input type="text" name="nazwisko"  class="umow">
+           <br><br><p>Podaj numer kontaktowy: </p><br>
+           <input type="text" name="telefon"  maxlength="9" class="umow">
+           <br><br> <p>Termin jazdy próbnej: </p><br>
+           <input type="text" id="datepicker" name="data" class="umow"></p>
+           <p><i>*Godzina zlecenia zostanie ustalona telefonicznie</i></p>
+           <br> <p>Interesujący model: </p><br>
+           <select name="model" class="umow">
+           <option value="">Wybierz</option>
+           <option value="Progen Huracán">Progen Huracán</option>
+           <option value="Progen Panamera">Progen Panamera</option>
+           <option value="Progen DBS">Progen DBS</option>
+           <option value="Progen Urus">Progen Urus</option>
+           <option value="Progen Seria3">Progen Seria3</option>
+           <option value="Progen AMG GT">Progen AMG GT</option>
+           </select>
+           <br><br> <p>Zgadzam się na przetwarzanie moich danych osobowych <input type="checkbox" name="zgoda"  class="umo2w"> </p>
+           <br>
+           <input type="submit" value="ZAREZERWUJ JAZDĘ"  class="serbut">
 
-$user1 = trim($_POST['user1']);
-$haslo1 = trim($_POST['haslo1']);
-
-if(empty($user1) || empty($haslo1)) {
-    
-// prosty formularz zawierający dwa pola
-echo  '<div class="rejestracja">
-<p class="grubo-log">REJESTRACJA</p>
-    
-    <br>
-     <form name = "main2.php" action = "main2.php" method = "POST">
-         <br> <p>Użytkownik: </p><br>
-         <input type="text" name="user1" class="umow">
-         <br><br><p>Haslo: </p><br>
-        <input type="password" name="haslo1"  class="umow">
-        <br>
-        <br>
-        <input type="submit" value="DOŁĄCZ"  class="serbut">
-
-     </form>
-</div>
-<div class="logowanie">
-<p class="error2">Błąd logowania, sprawdź login i hasło. Spróbuj ponownie</p>
-</div>';
-}
-else {
-    
-    // dane pochodzące z formularza
-    $dane = $user1.":".$haslo1."\n";
-    // przypisanie zmniennej $file nazwy pliku
-    $file = "logowanie.txt";
-    // uchwyt pliku, otwarcie do dopisania
-    $fp = fopen($file, "a");
-    // zapisanie danych do pliku
-    fwrite($fp, $dane);
-    // zamknięcie pliku
-    fclose($fp);
-
-    echo  '<div class="login">
-    <p class="good">Witamy w My Progen</p>
-    <a href="index.html" class="good-link">Powrót na strone głowną</a>
-      </div>';
-    
-    
-}
-
-?> 
-
-
-
-    </div>
+        </form>
+   </div>
     <div class="footer_login">
-
         <br>
         <p class="p1">&copy; Copyright 2020 Progen Cars</p>
         <p class="p2">Kamil Sagan</p>
     </div>
+</body>
+</html>
